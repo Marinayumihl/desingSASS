@@ -1,0 +1,403 @@
+// =====================================
+// COMPONENTES REUTILIZÁVEIS
+// =====================================
+
+@use "sass:color";
+@use "variaveis" as v;
+@use "mixins" as m;
+
+
+// =====================================
+// TÍTULOS DAS SEÇÕES
+// =====================================
+
+.secao-titulo {
+    font-size: v.$tamanho-titulo-secao;
+    text-align: center;
+    margin-bottom: v.$espacamento-padrao;
+    color: v.$cor-texto;
+}
+
+.secao-descricao {
+    max-width: 40rem;
+    margin: 0 auto v.$espacamento-padrao;
+    text-align: center;
+    color: v.$cor-texto-secundario;
+    line-height: 1.7;
+}
+
+.secao-subtitulo {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    color: v.$cor-roxo;
+    margin-bottom: v.$espacamento-pequeno;
+}
+
+.secao-cabecalho {
+    margin-bottom: 3rem;
+}
+
+
+// =====================================
+// TEXTO COM GRADIENTE
+// =====================================
+
+.texto-gradiente {
+    background: linear-gradient(
+        90deg,
+        v.$cor-roxo,
+        v.$cor-rosa
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+// =====================================
+// BOTÕES
+// =====================================
+
+.botao {
+    @include m.botao-base;
+
+    border: none;
+    background-color: v.$cor-roxo;
+    color: v.$cor-branco;
+
+    &:hover {
+        transform: translateY(-0.2rem);
+       background-color: color.adjust(v.$cor-roxo, $lightness: -8%);
+    }
+
+    &__seta {
+        font-size: 1.2rem;
+    }
+
+    &--primario {
+        background-color: v.$cor-roxo;
+        color: v.$cor-branco;
+    }
+
+    &--secundario {
+        background-color: v.$cor-rosa;
+        color: v.$cor-branco;
+
+        &:hover {
+            transform: translateY(-0.2rem);
+        }
+    }
+}
+
+
+// =====================================
+// VALORES DA AGÊNCIA
+// =====================================
+
+.valor {
+    &__icone {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        @include m.centralizar;
+
+        border-radius: 50%;
+        background-color: #f3e8ff;
+        font-size: 1.2rem;
+    }
+
+    &__texto {
+        font-weight: 600;
+    }
+}
+
+
+// =====================================
+// CARDS DE SERVIÇOS
+// =====================================
+
+.servicos {
+    &__card {
+        padding: v.$espacamento-padrao;
+
+        border-radius: v.$raio-padrao;
+
+        background-color: v.$cor-branco;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+        transition: 0.3s;
+
+        &:hover {
+            transform: translateY(-0.5rem);
+        }
+
+        &--roxo {
+            border-top: 4px solid v.$cor-roxo;
+        }
+
+        &--azul {
+            border-top: 4px solid v.$cor-azul;
+        }
+
+        &--rosa {
+            border-top: 4px solid v.$cor-rosa;
+        }
+
+        &--laranja {
+            border-top: 4px solid v.$cor-laranja;
+        }
+    }
+
+    &__numero {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: v.$cor-texto-secundario;
+        margin-bottom: v.$espacamento-pequeno;
+    }
+
+    &__icone {
+        font-size: 2rem;
+        margin-bottom: v.$espacamento-pequeno;
+    }
+
+    &__titulo {
+        font-size: 1.3rem;
+        margin-bottom: v.$espacamento-pequeno;
+    }
+
+    &__texto {
+        color: v.$cor-texto-secundario;
+        line-height: 1.7;
+    }
+}
+
+
+// =====================================
+// CARDS DE DEPOIMENTOS
+// =====================================
+
+.depoimentos {
+    &__card {
+        flex: 1;
+        min-width: 15rem;
+
+        padding: v.$espacamento-padrao;
+
+        border-radius: v.$raio-padrao;
+
+        background-color: v.$cor-branco;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    &__aspas {
+        font-size: 3rem;
+        line-height: 1;
+        color: v.$cor-roxo;
+        margin-bottom: v.$espacamento-pequeno;
+    }
+
+    &__texto {
+        font-style: italic;
+        color: v.$cor-texto-secundario;
+        line-height: 1.7;
+
+        // Operador Sass para calcular um espaçamento proporcional
+        margin-bottom: calc(v.$espacamento-padrao / 2);
+    }
+
+    &__cliente {
+        display: flex;
+        align-items: center;
+        gap: v.$espacamento-pequeno;
+        margin-top: v.$espacamento-pequeno;
+    }
+
+    &__avatar {
+        width: 3rem;
+        height: 3rem;
+
+        @include m.centralizar;
+
+        border-radius: 50%;
+
+        color: v.$cor-branco;
+        font-weight: 700;
+
+        &--roxo {
+            background-color: v.$cor-roxo;
+        }
+
+        &--rosa {
+            background-color: v.$cor-rosa;
+        }
+
+        &--azul {
+            background-color: v.$cor-azul;
+        }
+    }
+
+    &__dados {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__nome {
+        color: v.$cor-texto;
+        font-size: 1rem;
+    }
+
+    &__funcao {
+        color: v.$cor-texto-secundario;
+        font-size: 0.85rem;
+    }
+}
+
+
+// =====================================
+// FORMULÁRIO DE CONTATO
+// =====================================
+
+.contato {
+    &__informacoes {
+        flex: 1;
+    }
+
+    &__texto {
+        color: v.$cor-texto-secundario;
+        line-height: 1.7;
+        margin-bottom: v.$espacamento-padrao;
+    }
+
+    &__dados {
+        display: flex;
+        flex-direction: column;
+        gap: v.$espacamento-pequeno;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: v.$espacamento-pequeno;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__icone {
+        font-size: 1.2rem;
+    }
+
+    &__formulario {
+        flex: 1;
+
+        padding: v.$espacamento-padrao;
+
+        border-radius: v.$raio-padrao;
+
+        background-color: v.$cor-branco;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: v.$espacamento-pequeno;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    &__campo {
+        width: 100%;
+
+        padding: 0.9rem 1rem;
+
+        border: 1px solid #d1d5db;
+
+        border-radius: 0.7rem;
+
+        font-family: inherit;
+
+        outline: none;
+
+        transition: 0.3s;
+
+        &:focus {
+            border-color: v.$cor-roxo;
+
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+        }
+
+        &--mensagem {
+            min-height: 8rem;
+            resize: vertical;
+        }
+    }
+
+    &__botao {
+        @include m.botao-base;
+
+        border: none;
+
+        background-color: v.$cor-roxo;
+        color: v.$cor-branco;
+
+        margin-top: v.$espacamento-pequeno;
+
+        &:hover {
+            transform: translateY(-0.2rem);
+        }
+    }
+}
+
+
+// =====================================
+// RODAPÉ
+// =====================================
+
+.rodape {
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: v.$espacamento-pequeno;
+    }
+
+    &__logo-destaque {
+        color: v.$cor-rosa;
+    }
+
+    &__texto {
+        margin-bottom: v.$espacamento-pequeno;
+    }
+
+    &__copyright {
+        font-size: 0.8rem;
+        opacity: 0.7;
+    }
+}
+
+
+// =====================================
+// RESPONSIVIDADE DOS COMPONENTES
+// =====================================
+
+@media (max-width: 480px) {
+
+    .secao-titulo {
+        font-size: 2.1rem;
+    }
+
+    .botao {
+        width: 100%;
+    }
+
+    .depoimentos {
+        &__card {
+            min-width: 100%;
+        }
+    }
+
+}

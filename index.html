@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>criativa.web | Agência Criativa</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header class="cabecalho">
+
+        <a href="#home" class="cabecalho__logo">
+            criativa<span class="cabecalho__logo-destaque">.web</span>
+        </a>
+
+        <nav class="cabecalho__navegacao">
+
+            <ul class="cabecalho__lista">
+
+                <li class="cabecalho__item">
+                    <a href="#home" class="cabecalho__link">Home</a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a href="#sobre" class="cabecalho__link">Sobre</a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a href="#servicos" class="cabecalho__link">Serviços</a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a href="#depoimentos" class="cabecalho__link">Depoimentos</a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a href="#contato" class="cabecalho__link">Contato</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section id="home" class="home">
+
+        <div class="home__circulo home__circulo--rosa"></div>
+        <div class="home__circulo home__circulo--amarelo"></div>
+        <div class="home__circulo home__circulo--roxo"></div>
+
+        <div class="home__conteudo">
+
+            <p class="secao-subtitulo">
+                AGÊNCIA CRIATIVA DIGITAL
+            </p>
+
+            <h1 class="home__titulo">
+                Ideias não têm
+                <span class="texto-gradiente">uma única cor.</span>
+            </h1>
+
+            <p class="home__descricao">
+                Transformamos criatividade, estratégia e tecnologia
+                em experiências digitais que conectam marcas e pessoas.
+            </p>
+
+            <a href="#contato" class="botao">
+                Vamos criar juntos
+                <span class="botao__seta">→</span>
+            </a>
+
+        </div>
+
+
+        <div class="home__imagem">
+
+            <picture>
+
+                <source
+                    media="(max-width: 480px)"
+                    srcset="img/home-pequeno.jpg">
+
+                <source
+                    media="(max-width: 768px)"
+                    srcset="img/home-medio.jpg">
+
+                <img
+                    class="imagem-responsiva"
+                    src="img/home-grande.jpg"
+                    srcset="
+                        img/home-pequeno.jpg 480w,
+                        img/home-medio.jpg 768w,
+                        img/home-grande.jpg 1200w
+                    "
+                    sizes="
+                        (max-width: 480px) 90vw,
+                        (max-width: 768px) 80vw,
+                        45vw
+                    "
+                    alt="Espaço de trabalho criativo com elementos de design">
+
+            </picture>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE NÓS
+    ========================== -->
+
+    <section id="sobre" class="sobre">
+
+        <div class="sobre__imagem">
+
+            <picture>
+
+                <source
+                    media="(max-width: 480px)"
+                    srcset="img/sobre-pequena.jpg">
+
+                <source
+                    media="(max-width: 768px)"
+                    srcset="img/sobre-media.jpg">
+
+                <img
+                    class="imagem-responsiva"
+                    src="img/sobre-grande.jpg"
+                    srcset="
+                        img/sobre-pequena.jpg 480w,
+                        img/sobre-media.jpg 768w,
+                        img/sobre-grande.jpg 1200w
+                    "
+                    sizes="
+                        (max-width: 768px) 90vw,
+                        45vw
+                    "
+                    alt="Equipe trabalhando em projetos criativos">
+
+            </picture>
+
+        </div>
+
+
+        <div class="sobre__conteudo">
+
+            <p class="secao-subtitulo">
+                SOBRE NÓS
+            </p>
+
+            <h2 class="secao-titulo">
+                Criatividade que
+                <span class="texto-gradiente">conecta.</span>
+            </h2>
+
+            <p class="sobre__texto">
+                Somos uma agência digital apaixonada por transformar
+                ideias em experiências visuais.
+            </p>
+
+            <p class="sobre__texto">
+                Acreditamos que cada projeto possui uma identidade única.
+                Por isso, combinamos criatividade, tecnologia e estratégia
+                para criar soluções que realmente fazem diferença.
+            </p>
+
+
+            <div class="sobre__valores">
+
+                <div class="sobre__valor">
+
+                    <div class="sobre__valor-icone sobre__valor-icone--roxo">
+                        💡
+                    </div>
+
+                    <div class="sobre__valor-conteudo">
+
+                        <h3 class="sobre__valor-titulo">
+                            Criatividade
+                        </h3>
+
+                        <p class="sobre__valor-texto">
+                            Pensamos além do óbvio e buscamos
+                            ideias únicas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sobre__valor">
+
+                    <div class="sobre__valor-icone sobre__valor-icone--rosa">
+                        🚀
+                    </div>
+
+                    <div class="sobre__valor-conteudo">
+
+                        <h3 class="sobre__valor-titulo">
+                            Inovação
+                        </h3>
+
+                        <p class="sobre__valor-texto">
+                            Utilizamos tecnologia para criar
+                            experiências modernas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sobre__valor">
+
+                    <div class="sobre__valor-icone sobre__valor-icone--azul">
+                        🤝
+                    </div>
+
+                    <div class="sobre__valor-conteudo">
+
+                        <h3 class="sobre__valor-titulo">
+                            Conexão
+                        </h3>
+
+                        <p class="sobre__valor-texto">
+                            Criamos projetos que aproximam
+                            marcas e pessoas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVIÇOS
+    ========================== -->
+
+    <section id="servicos" class="servicos">
+
+        <div class="secao-cabecalho">
+
+            <p class="secao-subtitulo">
+                NOSSAS SOLUÇÕES
+            </p>
+
+            <h2 class="secao-titulo">
+                O que podemos
+                <span class="texto-gradiente">criar juntos?</span>
+            </h2>
+
+        </div>
+
+
+        <div class="servicos__grid">
+
+            <article class="servicos__card servicos__card--roxo">
+
+                <div class="servicos__numero">
+                    01
+                </div>
+
+                <div class="servicos__icone">
+                    🎨
+                </div>
+
+                <h3 class="servicos__titulo">
+                    Design Gráfico
+                </h3>
+
+                <p class="servicos__texto">
+                    Criamos materiais visuais que comunicam ideias
+                    e fortalecem marcas.
+                </p>
+
+            </article>
+
+
+            <article class="servicos__card servicos__card--azul">
+
+                <div class="servicos__numero">
+                    02
+                </div>
+
+                <div class="servicos__icone">
+                    💻
+                </div>
+
+                <h3 class="servicos__titulo">
+                    Desenvolvimento Web
+                </h3>
+
+                <p class="servicos__texto">
+                    Desenvolvemos sites modernos, responsivos
+                    e pensados para diferentes dispositivos.
+                </p>
+
+            </article>
+
+
+            <article class="servicos__card servicos__card--rosa">
+
+                <div class="servicos__numero">
+                    03
+                </div>
+
+                <div class="servicos__icone">
+                    ✨
+                </div>
+
+                <h3 class="servicos__titulo">
+                    Branding
+                </h3>
+
+                <p class="servicos__texto">
+                    Criamos identidades visuais que representam
+                    a personalidade de cada marca.
+                </p>
+
+            </article>
+
+
+            <article class="servicos__card servicos__card--laranja">
+
+                <div class="servicos__numero">
+                    04
+                </div>
+
+                <div class="servicos__icone">
+                    📱
+                </div>
+
+                <h3 class="servicos__titulo">
+                    Social Media
+                </h3>
+
+                <p class="servicos__texto">
+                    Desenvolvemos conteúdos criativos para fortalecer
+                    a presença digital das marcas.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DEPOIMENTOS
+    ========================== -->
+
+    <section id="depoimentos" class="depoimentos">
+
+        <div class="secao-cabecalho">
+
+            <p class="secao-subtitulo">
+                DEPOIMENTOS
+            </p>
+
+            <h2 class="secao-titulo">
+                Quem criou com a gente,
+                <span class="texto-gradiente">conta.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="depoimentos__lista">
+
+            <article class="depoimentos__card">
+
+                <div class="depoimentos__aspas">
+                    "
+                </div>
+
+                <p class="depoimentos__texto">
+                    A equipe conseguiu entender exatamente
+                    o que imaginávamos e transformou nossas
+                    ideias em uma identidade incrível.
+                </p>
+
+                <div class="depoimentos__cliente">
+
+                    <div class="depoimentos__avatar depoimentos__avatar--roxo">
+                        AM
+                    </div>
+
+                    <div class="depoimentos__dados">
+
+                        <h4 class="depoimentos__nome">
+                            Ana Martins
+                        </h4>
+
+                        <span class="depoimentos__funcao">
+                            Cliente
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="depoimentos__card">
+
+                <div class="depoimentos__aspas">
+                    "
+                </div>
+
+                <p class="depoimentos__texto">
+                    Nosso site ficou moderno, criativo e muito
+                    mais profissional. O resultado superou
+                    nossas expectativas.
+                </p>
+
+                <div class="depoimentos__cliente">
+
+                    <div class="depoimentos__avatar depoimentos__avatar--rosa">
+                        LF
+                    </div>
+
+                    <div class="depoimentos__dados">
+
+                        <h4 class="depoimentos__nome">
+                            Lucas Ferreira
+                        </h4>
+
+                        <span class="depoimentos__funcao">
+                            Cliente
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="depoimentos__card">
+
+                <div class="depoimentos__aspas">
+                    "
+                </div>
+
+                <p class="depoimentos__texto">
+                    Uma experiência incrível do início ao fim.
+                    Criatividade e profissionalismo em cada
+                    detalhe do projeto.
+                </p>
+
+                <div class="depoimentos__cliente">
+
+                    <div class="depoimentos__avatar depoimentos__avatar--azul">
+                        MS
+                    </div>
+
+                    <div class="depoimentos__dados">
+
+                        <h4 class="depoimentos__nome">
+                            Mariana Souza
+                        </h4>
+
+                        <span class="depoimentos__funcao">
+                            Cliente
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================== -->
+
+    <section id="contato" class="contato">
+
+        <div class="contato__informacoes">
+
+            <p class="secao-subtitulo">
+                ENTRE EM CONTATO
+            </p>
+
+            <h2 class="secao-titulo">
+                Tem uma ideia
+                <span class="texto-gradiente">colorida aí?</span>
+            </h2>
+
+            <p class="contato__texto">
+                Vamos transformar sua ideia em algo incrível?
+                Entre em contato com a gente!
+            </p>
+
+
+            <div class="contato__dados">
+
+                <div class="contato__item">
+                    <span class="contato__icone">📍</span>
+                    <p>São Paulo, Brasil</p>
+                </div>
+
+                <div class="contato__item">
+                    <span class="contato__icone">📞</span>
+                    <p>(11) 99999-9999</p>
+                </div>
+
+                <div class="contato__item">
+                    <span class="contato__icone">✉️</span>
+                    <p>contato@criativaweb.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <form class="contato__formulario">
+
+            <input
+                class="contato__campo"
+                type="text"
+                placeholder="Seu nome"
+                required>
+
+            <input
+                class="contato__campo"
+                type="email"
+                placeholder="Seu e-mail"
+                required>
+
+            <textarea
+                class="contato__campo contato__campo--mensagem"
+                placeholder="Conte um pouco sobre sua ideia..."
+                rows="6"
+                required></textarea>
+
+            <button
+                class="contato__botao"
+                type="submit">
+
+                Enviar minha ideia
+                <span>→</span>
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape__logo">
+            criativa<span class="rodape__logo-destaque">.web</span>
+        </div>
+
+        <p class="rodape__texto">
+            Criatividade, tecnologia e ideias sem limites.
+        </p>
+
+        <p class="rodape__copyright">
+            © 2026 Agência Criativa Web.
+            Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

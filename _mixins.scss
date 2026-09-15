@@ -1,0 +1,30 @@
+// =====================================
+// MIXINS REUTILIZÁVEIS
+// =====================================
+
+// Centraliza elementos com Flexbox
+@mixin centralizar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Estilo padrão para botões
+@mixin botao-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+
+    padding: 1rem 1.6rem;
+
+    border-radius: 2rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}

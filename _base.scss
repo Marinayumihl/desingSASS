@@ -1,0 +1,30 @@
+// =====================================
+// ESTILOS BASE
+// =====================================
+
+@use "variaveis" as v;
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Configurações gerais da página
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: v.$fonte-principal;
+    background-color: v.$cor-fundo;
+    color: v.$cor-texto;
+    overflow-x: hidden;
+}
+
+// Imagens responsivas
+.imagem-responsiva {
+    width: 100%;
+    display: block;
+}

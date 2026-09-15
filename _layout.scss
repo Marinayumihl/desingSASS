@@ -1,0 +1,450 @@
+// =====================================
+// ESTRUTURA E LAYOUT DA PÁGINA
+// =====================================
+
+@use "variaveis" as v;
+@use "mixins" as m;
+
+
+// =====================================
+// CABEÇALHO
+// =====================================
+
+.cabecalho {
+    width: 100%;
+    padding: 1.2rem 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__logo {
+        text-decoration: none;
+        color: v.$cor-texto;
+
+        font-size: 1.6rem;
+        font-weight: 800;
+    }
+
+    &__logo-destaque {
+        color: v.$cor-roxo;
+    }
+
+    &__lista {
+        display: flex;
+        gap: 2rem;
+
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #374151;
+
+        font-size: 0.95rem;
+        font-weight: 500;
+
+        transition: 0.3s;
+
+        &:hover {
+            color: v.$cor-roxo;
+        }
+    }
+}
+
+
+// =====================================
+// HOME
+// =====================================
+
+.home {
+    min-height: 90vh;
+
+    padding: 5rem 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 4rem;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f5f0ff,
+            #fff0f7
+        );
+
+    &__conteudo {
+        max-width: 40rem;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    &__titulo {
+        font-size: v.$tamanho-titulo-home;
+        line-height: 1.05;
+
+        margin-bottom: v.$espacamento-pequeno;
+    }
+
+    &__descricao {
+        max-width: 35rem;
+
+        font-size: 1.1rem;
+        line-height: 1.8;
+
+        margin-bottom: v.$espacamento-padrao;
+
+        color: v.$cor-texto-secundario;
+    }
+
+    &__imagem {
+        width: 45%;
+
+        position: relative;
+        z-index: 2;
+
+        .imagem-responsiva {
+            border-radius: v.$raio-grande;
+
+            box-shadow:
+                0 20px 50px
+                rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+
+// =====================================
+// ELEMENTOS DECORATIVOS DA HOME
+// =====================================
+
+.home__circulo {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(10px);
+    opacity: 0.5;
+
+    &--rosa {
+        width: 18rem;
+        height: 18rem;
+
+        background-color: v.$cor-rosa;
+
+        top: -8rem;
+        right: -5rem;
+    }
+
+    &--amarelo {
+        width: 12rem;
+        height: 12rem;
+
+        background-color: v.$cor-amarelo;
+
+        bottom: -5rem;
+        left: 35%;
+    }
+
+    &--roxo {
+        width: 10rem;
+        height: 10rem;
+
+        background-color: v.$cor-roxo;
+
+        top: 30%;
+        left: -5rem;
+    }
+}
+
+
+// =====================================
+// SOBRE
+// =====================================
+
+.sobre {
+    padding: v.$espacamento-secao 8%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5rem;
+
+    &__imagem {
+        width: 45%;
+
+        .imagem-responsiva {
+            border-radius: v.$raio-grande;
+        }
+    }
+
+    &__conteudo {
+        flex: 1;
+    }
+
+    &__texto {
+        color: v.$cor-texto-secundario;
+
+        line-height: 1.8;
+
+        margin-bottom: v.$espacamento-pequeno;
+    }
+
+    &__valores {
+        margin-top: v.$espacamento-padrao;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: v.$espacamento-pequeno;
+    }
+
+    &__valor {
+        display: flex;
+        align-items: center;
+
+        gap: v.$espacamento-pequeno;
+
+        padding: v.$espacamento-pequeno;
+
+        border-radius: 1rem;
+
+        transition: 0.3s;
+
+        &:hover {
+            transform: translateX(0.5rem);
+            background-color: #f9fafb;
+        }
+    }
+}
+
+
+// =====================================
+// SERVIÇOS
+// =====================================
+
+.servicos {
+    padding: v.$espacamento-secao 8%;
+
+    background-color: #f8f7ff;
+
+    &__grid {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 1.5rem;
+    }
+}
+
+
+// =====================================
+// DEPOIMENTOS
+// =====================================
+
+.depoimentos {
+    padding: v.$espacamento-secao 8%;
+
+    &__lista {
+        display: flex;
+
+        gap: 1.5rem;
+
+        flex-wrap: wrap;
+    }
+}
+
+
+// =====================================
+// CONTATO
+// =====================================
+
+.contato {
+    padding: v.$espacamento-secao 8%;
+
+    display: flex;
+
+    gap: 5rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f0ff,
+            #fff0f7,
+            #fff7ed
+        );
+
+    &__informacoes {
+        flex: 1;
+    }
+
+    &__dados {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: v.$espacamento-pequeno;
+    }
+}
+
+
+// =====================================
+// RODAPÉ
+// =====================================
+
+.rodape {
+    padding: 3rem 8%;
+
+    text-align: center;
+
+    background-color: #1f1535;
+
+    color: v.$cor-branco;
+}
+
+
+// =====================================
+// RESPONSIVIDADE
+// =====================================
+
+@media (max-width: 1024px) {
+
+    .home {
+        &__titulo {
+            font-size: 3.5rem;
+        }
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: v.$espacamento-pequeno;
+
+        &__lista {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: v.$espacamento-pequeno;
+        }
+    }
+
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+
+        padding-top: 4rem;
+
+        &__conteudo {
+            max-width: 100%;
+        }
+
+        &__titulo {
+            font-size: 3rem;
+        }
+
+        &__imagem {
+            width: 90%;
+        }
+    }
+
+
+    .sobre {
+        flex-direction: column;
+        gap: 3rem;
+
+        &__imagem {
+            width: 100%;
+        }
+    }
+
+
+    .servicos {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+    .contato {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .cabecalho {
+        padding: 1rem 5%;
+
+        &__lista {
+            gap: 0.8rem;
+        }
+
+        &__link {
+            font-size: 0.8rem;
+        }
+    }
+
+
+    .home,
+    .sobre,
+    .servicos,
+    .depoimentos,
+    .contato {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .home {
+        &__titulo {
+            font-size: 2.5rem;
+        }
+
+        &__descricao {
+            font-size: 1rem;
+        }
+
+        &__imagem {
+            width: 100%;
+        }
+    }
+
+
+    .secao-titulo {
+        font-size: 2.1rem;
+    }
+
+
+    .servicos {
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    .depoimentos {
+        &__lista {
+            flex-direction: column;
+        }
+    }
+
+}

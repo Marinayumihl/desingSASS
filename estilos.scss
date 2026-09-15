@@ -1,0 +1,12 @@
+// =====================================
+// ARQUIVO PRINCIPAL DO SASS
+// =====================================
+
+// Estilos básicos
+@use "base";
+
+// Estrutura e layout
+@use "layout";
+
+// Componentes reutilizáveis
+@use "componentes";
